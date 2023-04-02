@@ -29,25 +29,13 @@ public class PlayerJoinListener implements Listener {
 
         e.setJoinMessage(null);
 
+        message = cfg.getString("Join").replaceAll("&", "§");
+
         if (cfg.getString("Disable-Join-LeaveMessage").equals("true")) return;
 
         if (cfg.getString("Hide-Players-With-Perms").equals("true")) {
             if (pl.hasPermission("joinleave.silentjoin")) return;
         }
-
-
-        /**if (cfg.getString("First-Join-Message").equals("true")) {
-            if (!hasjoined) {
-                message = cfg.getString("First-Join").replaceAll("%player%", pl.getName()).replaceAll("&", "§");
-            } else {
-               message = cfg.getString("Join").replaceAll("%player%", pl.getName()).replaceAll("&", "§");
-            }
-        } else {
-            message = cfg.getString("Join").replaceAll("%player%", pl.getName()).replaceAll("&", "§");
-        }
-        */
-
-        //TODO ALLE CODE UITESTEN
 
         firstJoined(pl);
 
