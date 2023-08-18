@@ -1,0 +1,10 @@
+name: Join-Leave
+version: ${project.version}
+main: dev.idw0309.joinleave.JoinLeave
+api-version: 1.16
+authors: [ IdW0309 ]
+description: Join Leave Plugin
+
+commands:
+  joinleave:
+    description: just a command
